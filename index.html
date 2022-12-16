@@ -6,7 +6,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="style.css" rel="stylesheet" type="text/css" />
     <script src="script.js" defer></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+
     <title>Password Generator</title>
   </head>
-  <body></body>
+  <body>
+    <main class="container">
+      <h1 class="title">Password Generator</h1>
+      <section class="section-password">
+        <p class="section-password__password"></p>
+        <span class="section-password__copy"
+          ><ion-icon
+            name="copy-outline"
+            class="section-password__copy-icon"
+          ></ion-icon
+        ></span>
+      </section>
+      <section class="section-settings">
+        <div class="section-settings__length">
+          <p class="section-settings__length-title">Character Length</p>
+          <p class="section-settings__length-content">10</p>
+        </div>
+        <div class="section-settings__range">
+          <input type="range" class="section-settings__range-input" />
+        </div>
+        <div class="section-settings__checkbox"></div>
+        <div class="section-settings__strength">
+          <div class="section-settings__strength-title">Strength</div>
+          <div class="section-settings__strength-content">
+            <span class="strength-level"></span>
+            <span class="strength-blocks"></span>
+          </div>
+        </div>
+        <button class="section-settings__btn-generate"></button>
+      </section>
+    </main>
+  </body>
 </html>
