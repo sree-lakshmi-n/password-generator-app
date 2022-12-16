@@ -33,10 +33,9 @@ body {
 
 .section-password {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   padding: 1.6rem;
-  justify-content: space-between;
   background-color: #24232c;
   margin-bottom: 1.6rem; }
   .section-password__password {
@@ -45,3 +44,8 @@ body {
     width: 2.4rem;
     height: 2.4rem;
     color: #a4ffaf; }
+
+.section-settings__length {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
