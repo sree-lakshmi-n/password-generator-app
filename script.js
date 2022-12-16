@@ -1,10 +1,19 @@
 `use strict`;
+
 const settingsCheckbox = document.getElementsByClassName(
   "section-settings__checkbox"
 )[0];
 const strengthBlocks = document.getElementsByClassName("strength-blocks")[0];
+const slider = document.getElementsByClassName(
+  "section-settings__range-input"
+)[0];
+const sliderOutput = document.getElementsByClassName(
+  "section-settings__length-content"
+)[0];
+
 const noOfSettings = 4;
 const noOfStrengthBlocks = 4;
+
 // PAGE SETUP
 //Adding checkboxes with labels
 const addSettingCheckboxes = () => {
@@ -37,3 +46,8 @@ const addStrengthBlocks = () => {
 };
 addSettingCheckboxes();
 addStrengthBlocks();
+
+// Update the current slider value (each time you drag the slider handle)
+slider.addEventListener("input", (event) => {
+  sliderOutput.textContent = event.target.value;
+});
