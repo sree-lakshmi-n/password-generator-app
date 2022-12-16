@@ -22,8 +22,16 @@ body {
   width: 30%; }
 
 .section-settings {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 2.4rem;
   background-color: #24232c;
-  padding: 2rem 1.6rem; }
+  padding: 2rem 1.6rem;
+  font-size: 1.4rem;
+  text-transform: capitalize; }
 
 .title {
   color: #817d92;
@@ -49,3 +57,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center; }
+
+.section-settings__length-content {
+  font-size: 2rem;
+  color: #a4ffaf; }
