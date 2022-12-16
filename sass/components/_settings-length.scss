@@ -1,3 +1,7 @@
 .section-settings__length {
   @include flex-space-between;
 }
+.section-settings__length-content {
+  font-size: 2rem;
+  color: $neon-green;
+}
