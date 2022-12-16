@@ -21,11 +21,15 @@ body {
 .container {
   width: 30%; }
 
+.section-settings {
+  background-color: #24232c;
+  padding: 2rem 1.6rem; }
+
 .title {
   color: #817d92;
   font-size: 2rem;
   text-align: center;
-  margin-bottom: 1.6rem; }
+  margin-bottom: 2rem; }
 
 .section-password {
   display: flex;
