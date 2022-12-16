@@ -18,7 +18,26 @@ body {
   line-height: 1;
   color: #e6e5ea; }
 
+.container {
+  width: 30%; }
+
 .title {
   color: #817d92;
-  font-size: 2.4rem;
-  text-align: center; }
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1.6rem; }
+
+.section-password {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.6rem;
+  justify-content: space-between;
+  background-color: #24232c;
+  margin-bottom: 1.6rem; }
+  .section-password__password {
+    font-size: 2.4rem; }
+  .section-password__copy-icon {
+    width: 2.4rem;
+    height: 2.4rem;
+    color: #a4ffaf; }
