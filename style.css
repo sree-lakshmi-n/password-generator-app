@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@700&display=swap");
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  background-color: #18171f;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "JetBrains Mono", monospace;
+  font-weight: 700;
+  line-height: 1;
+  color: #e6e5ea; }
+
+.title {
+  color: #817d92;
+  font-size: 2.4rem;
+  text-align: center; }
