@@ -13,6 +13,12 @@ const sliderOutput = document.getElementsByClassName(
 
 const noOfSettings = 4;
 const noOfStrengthBlocks = 4;
+const checkmarkLabels = [
+  "Include Uppercase letters",
+  "include lowercase letters",
+  "include numbers",
+  "include symbols",
+];
 
 // PAGE SETUP
 //Adding checkboxes with labels
@@ -31,6 +37,7 @@ const addSettingCheckboxes = () => {
     checkMark.setAttribute("class", "checkmark");
     const checkLabel = document.createElement("span");
     checkLabel.setAttribute("class", "checklabel");
+    checkLabel.textContent = checkmarkLabels[i];
     labels.appendChild(input);
     labels.appendChild(checkMark);
     labels.appendChild(checkLabel);
