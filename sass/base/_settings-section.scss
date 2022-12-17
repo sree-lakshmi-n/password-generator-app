@@ -1,8 +1,5 @@
 .section-settings {
-  @include flex-center;
-  flex-direction: column;
-  align-items: stretch;
-  gap: 2.4rem;
+  @include flex-col-gap(2.4rem);
   background-color: $dark-grey;
   padding: 2rem 1.6rem;
   font-size: 1.4rem;
