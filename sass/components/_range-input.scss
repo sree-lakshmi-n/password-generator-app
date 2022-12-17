@@ -1,0 +1,70 @@
+.section-settings__range-input {
+  width: 100%;
+  @include appearance-none;
+  height: 0.8rem;
+  background: $very-dark-grey;
+  outline: none;
+}
+
+// WEBKIT
+// Slider thumb
+.section-settings__range-input::-webkit-slider-thumb {
+  @include appearance-none;
+  width: 2rem;
+  height: 2rem;
+  @include border-radius;
+  @include slider-thumb-settings;
+  border: 1px solid $off-white;
+  box-shadow: 0 0 2px $very-dark-grey;
+  margin-top: calc(0.8em * 0.5 - max(1.8em * 0.5, 1px));
+}
+// Progress support
+.section-settings__range-input.slider-progress {
+  --range: calc(var(--max) - var(--min));
+  --ratio: calc((var(--value) - var(--min)) / var(--range));
+  --sx: calc(0.5 * 2em + var(--ratio) * (100% - 2em));
+}
+input[type="range"].section-settings__range-input.slider-progress::-webkit-slider-runnable-track {
+  height: 70%;
+  background: linear-gradient($neon-green, $neon-green) 0 / var(--sx) 100%
+      no-repeat,
+    $very-dark-grey;
+}
+// Slider thumb hover and active states
+.section-settings__range-input:hover input[type="range"]::-webkit-slider-thumb {
+  background: $very-dark-grey;
+}
+input[type="range"].section-settings__range-input::-webkit-slider-thumb:hover {
+  @include thumb-onhover-bg-border;
+}
+input[type="range"].section-settings__range-input::-webkit-slider-thumb:active {
+  @include thumb-onhover-bg-border;
+}
+
+// MOZILLA
+// Slider thumb
+.section-settings__range-input::-moz-slider-thumb {
+  @include slider-thumb-settings;
+  @include border-radius;
+}
+// Slider thumb hover and active states
+input[type="range"].section-settings__range-input::-ms-thumb:hover {
+  @include thumb-onhover-bg-border;
+}
+
+input[type="range"].section-settings__range-input::-ms-thumb:active {
+  @include thumb-onhover-bg-border;
+}
+// Progress support
+.section-settings__range-input::-moz-range-progress {
+  @include progress-bg-color;
+  height: 70%;
+}
+
+// IE
+// Progress support
+.section-settings__range-input::-ms-fill-lower {
+  @include progress-bg-color;
+}
+
+// Courtesy: https://toughengineer.github.io/demo/slider-styler/slider-styler.html
