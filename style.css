@@ -18,6 +18,11 @@ body {
   line-height: 1;
   color: #e6e5ea; }
 
+.section-settings__checkbox {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem; }
+
 .container {
   width: 30%; }
 
