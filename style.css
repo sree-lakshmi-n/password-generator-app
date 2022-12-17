@@ -53,6 +53,74 @@ body {
     height: 2.4rem;
     color: #a4ffaf; }
 
+.section-settings__range-input {
+  width: 100%;
+  appearance: none;
+  -webkit-appearance: none;
+  height: 0.8rem;
+  background: #18171f;
+  outline: none; }
+
+.section-settings__range-input::-webkit-slider-thumb {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  background: #e6e5ea;
+  cursor: pointer;
+  border: 1px solid #e6e5ea;
+  box-shadow: 0 0 2px #18171f;
+  margin-top: calc(0.8em * 0.5 - max(1.8em * 0.5, 1px)); }
+
+.section-settings__range-input.slider-progress {
+  --range: calc(var(--max) - var(--min));
+  --ratio: calc((var(--value) - var(--min)) / var(--range));
+  --sx: calc(0.5 * 2em + var(--ratio) * (100% - 2em)); }
+
+input[type="range"].section-settings__range-input.slider-progress::-webkit-slider-runnable-track {
+  height: 70%;
+  background: linear-gradient(#a4ffaf, #a4ffaf) 0/var(--sx) 100% no-repeat, #18171f; }
+
+.section-settings__range-input:hover input[type="range"]::-webkit-slider-thumb {
+  background: #18171f; }
+
+input[type="range"].section-settings__range-input::-webkit-slider-thumb:hover {
+  background: #18171f;
+  border-color: #a4ffaf; }
+
+input[type="range"].section-settings__range-input::-webkit-slider-thumb:active {
+  background: #18171f;
+  border-color: #a4ffaf; }
+
+.section-settings__range-input::-moz-slider-thumb {
+  background: #e6e5ea;
+  cursor: pointer;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%; }
+
+input[type="range"].section-settings__range-input::-ms-thumb:hover {
+  background: #18171f;
+  border-color: #a4ffaf; }
+
+input[type="range"].section-settings__range-input::-ms-thumb:active {
+  background: #18171f;
+  border-color: #a4ffaf; }
+
+.section-settings__range-input::-moz-range-progress {
+  background: #a4ffaf;
+  height: 70%; }
+
+.section-settings__range-input::-ms-fill-lower {
+  background: #a4ffaf; }
+
 .section-settings__length {
   display: flex;
   justify-content: space-between;
