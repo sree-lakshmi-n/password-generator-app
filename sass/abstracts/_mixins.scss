@@ -8,6 +8,11 @@
   justify-content: space-between;
   align-items: center;
 }
+@mixin flex-col-gap($gap: 1.6rem) {
+  display: flex;
+  flex-direction: column;
+  gap: $gap;
+}
 @mixin appearance-none {
   appearance: none;
   -webkit-appearance: none;
