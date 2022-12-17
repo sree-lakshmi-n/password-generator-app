@@ -8,3 +8,25 @@
   justify-content: space-between;
   align-items: center;
 }
+@mixin appearance-none {
+  appearance: none;
+  -webkit-appearance: none;
+}
+@mixin border-radius($radius: 50%) {
+  border-radius: $radius;
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  -o-border-radius: $radius;
+}
+@mixin slider-thumb-settings {
+  background: $off-white;
+  cursor: pointer;
+}
+@mixin progress-bg-color {
+  background: $neon-green;
+}
+@mixin thumb-onhover-bg-border {
+  background: $very-dark-grey;
+  border-color: $neon-green;
+}
