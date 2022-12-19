@@ -3,7 +3,8 @@
 const settingsCheckbox = document.getElementsByClassName(
   "section-settings__checkbox"
 )[0];
-const strengthBlocks = document.getElementsByClassName("strength-blocks")[0];
+const strengthBlocksContainer =
+  document.getElementsByClassName("strength-blocks")[0];
 const slider = document.getElementsByClassName(
   "section-settings__range-input"
 )[0];
@@ -48,7 +49,7 @@ const addStrengthBlocks = () => {
   for (let i = 0; i < noOfStrengthBlocks; i++) {
     const block = document.createElement("div");
     block.setAttribute("class", "strength-block");
-    strengthBlocks.appendChild(block);
+    strengthBlocksContainer.appendChild(block);
   }
 };
 addSettingCheckboxes();
@@ -68,3 +69,19 @@ for (let e of document.querySelectorAll(
   e.style.setProperty("--max", e.max == "" ? "100" : e.max);
   e.addEventListener("input", () => e.style.setProperty("--value", e.value));
 }
+
+// Strength blocks bg color setting
+const strengthBlocks = document.getElementsByClassName("strength-block");
+const strengthLevel = document.getElementsByClassName("strength-level")[0];
+const levels = {
+  "too weak!": "red",
+  weak: "orange",
+  medium: "yellow",
+  strong: "green",
+};
+const setStrengthColor = (level) => {
+  for (let i = 0; i <= Object.keys(levels).indexOf(level); i++) {
+    strengthLevel.textContent = level;
+    strengthBlocks[i].className = `strength-block ${levels[level]}`;
+  }
+};
