@@ -6,4 +6,15 @@
   border: none;
   font-family: inherit;
   font-weight: inherit;
+  cursor: pointer;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  &:hover {
+    box-shadow: inset 0px 0px 0px 2px $neon-green;
+    background-color: $very-dark-grey;
+    color: $neon-green;
+  }
 }
