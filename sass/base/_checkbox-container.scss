@@ -1,3 +1,14 @@
 .section-settings__checkbox {
   @include flex-col-gap;
+  &-container {
+    @include flex-center;
+    justify-content: flex-start;
+    gap: 0.8rem;
+  }
+}
+.checkbox {
+  width: 2.4rem;
+  height: 2.4rem;
+  color: $very-dark-grey;
+  accent-color: $neon-green;
 }
