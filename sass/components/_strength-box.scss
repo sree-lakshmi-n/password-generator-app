@@ -1,0 +1,22 @@
+.section-settings__strength {
+  background-color: $very-dark-grey;
+  padding: 1.2rem;
+  text-transform: uppercase;
+  @include flex-space-between;
+
+  &-title {
+    color: $grey;
+  }
+  &-content {
+    @include flex-center;
+    gap: 1.8rem;
+  }
+}
+.strength-blocks {
+  @include flex-gap(0.6rem);
+  .strength-block {
+    border: 1px solid $off-white;
+    height: 2.4rem;
+    width: 0.6rem;
+  }
+}
