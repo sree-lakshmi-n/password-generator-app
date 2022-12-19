@@ -13,6 +13,10 @@
   flex-direction: column;
   gap: $gap;
 }
+@mixin flex-gap($gap: 1.6rem) {
+  display: flex;
+  gap: $gap;
+}
 @mixin appearance-none {
   appearance: none;
   -webkit-appearance: none;
